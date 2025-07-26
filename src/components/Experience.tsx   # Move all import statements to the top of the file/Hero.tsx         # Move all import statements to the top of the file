@@ -1,0 +1,25 @@
+const Experience = () => {
+    import React from 'react';
+    import { SomeComponent } from 'some-library';
+
+    return (
+        <div>
+            <h1>Experience</h1>
+        </div>
+    );
+};
+
+export default Experience;
+
+const Hero = () => {
+    import React from 'react';
+    import { AnotherComponent } from 'another-library';
+
+    return (
+        <div>
+            <h1>Hero</h1>
+        </div>
+    );
+};
+
+export default Hero;
