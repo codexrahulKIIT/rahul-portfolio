@@ -1,4 +1,4 @@
-export {};
+
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Github, Linkedin, Mail, Download, ArrowDown } from 'lucide-react';
