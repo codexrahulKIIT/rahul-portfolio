@@ -1,6 +1,7 @@
+// import React, { useState } from 'react';
+// import { motion, AnimatePresence } from 'framer-motion';
+// import { Github, ExternalLink, Eye, Star } from 'lucide-react';
 import React, { useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Github, ExternalLink, Eye, Star } from 'lucide-react';
 
 // Type definitions
 type ProjectType = {
