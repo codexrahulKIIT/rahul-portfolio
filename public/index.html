@@ -2,7 +2,8 @@
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="format-detection" content="telephone=no">
     <meta name="theme-color" content="#3B82F6">
     
     <!-- SEO Meta Tags -->
@@ -172,7 +173,161 @@
         ::-webkit-scrollbar-thumb:hover {
             background: var(--primary-dark);
         }
+
+        /* Responsive container padding and centering */
+        .max-w-6xl, .max-w-7xl {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        /* Responsive adjustments for all sections */
+        @media (max-width: 768px) {
+            html, body {
+                max-width: 100vw;
+                overflow-x: hidden;
+                font-size: 1rem;
+                line-height: 1.5;
+            }
+            h1, h2, h3, h4 {
+                font-size: 1.5rem !important;
+                text-align: center !important;
+            }
+            .max-w-6xl, .max-w-7xl {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+            /* Stack all grids and flex layouts vertically */
+            .grid, .md\:grid-cols-2, .md\:grid-cols-3, .lg\:grid-cols-3 {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+            }
+            .flex, .items-center {
+                flex-direction: column !important;
+                align-items: center !important;
+                gap: 1rem !important;
+            }
+            .text-5xl, .md\:text-7xl, .text-4xl {
+                font-size: 2rem !important;
+            }
+            .text-xl, .md\:text-2xl {
+                font-size: 1.1rem !important;
+            }
+            .mb-8, .mb-16, .mt-8, .mt-12 {
+                margin-bottom: 1.5rem !important;
+                margin-top: 1.5rem !important;
+            }
+            .p-6, .p-8 {
+                padding: 1rem !important;
+            }
+            .rounded-xl, .rounded-lg, .rounded-full {
+                border-radius: 0.75rem !important;
+            }
+            .w-32, .h-32, .w-16, .h-16, .w-12, .h-12 {
+                width: 6rem !important;
+                height: 6rem !important;
+                min-width: 3rem !important;
+                min-height: 3rem !important;
+                max-width: 100% !important;
+                max-height: 100% !important;
+            }
+            img {
+                max-width: 100%;
+                height: auto;
+                display: block;
+                margin: 0 auto;
+            }
+            /* Social icons and links wrap/stack */
+            .space-x-6, .space-x-8, .space-x-4 {
+                display: flex !important;
+                flex-direction: row !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+                gap: 1rem !important;
+            }
+            .px-8, .py-3 {
+                padding-left: 1rem !important;
+                padding-right: 1rem !important;
+                padding-top: 0.75rem !important;
+                padding-bottom: 0.75rem !important;
+            }
+            .btn, button, a {
+                min-height: 44px !important;
+                font-size: 1rem !important;
+                padding: 0.75rem 1rem !important;
+                width: 100% !important;
+                text-align: center !important;
+            }
+            .text-center {
+                text-align: center !important;
+            }
+            .absolute, .relative {
+                position: static !important;
+                transform: none !important;
+                left: auto !important;
+                right: auto !important;
+                top: auto !important;
+                bottom: auto !important;
+            }
+            nav, footer {
+                padding-left: 0.5rem !important;
+                padding-right: 0.5rem !important;
+            }
+            input, textarea {
+                font-size: 1rem !important;
+                min-height: 44px !important;
+                width: 100% !important;
+            }
+            .project-card {
+                min-width: 0 !important;
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+            .grid-cols-2, .md\:grid-cols-2, .md\:grid-cols-3, .lg\:grid-cols-3 {
+                grid-template-columns: 1fr !important;
+            }
+            /* Stack CTA buttons vertically */
+            .flex-col.sm\:flex-row {
+                flex-direction: column !important;
+                gap: 1rem !important;
+                width: 100% !important;
+            }
+            /* Contact section grid stacks */
+            .md\:grid-cols-2 {
+                display: flex !important;
+                flex-direction: column !important;
+                gap: 2rem !important;
+            }
+            /* Timeline experience section */
+            .relative {
+                position: static !important;
+            }
+            .w-1\/2, .pr-8, .pl-8 {
+                width: 100% !important;
+                padding-right: 0 !important;
+                padding-left: 0 !important;
+                text-align: center !important;
+            }
+            .w-8, .h-8 {
+                width: 2rem !important;
+                height: 2rem !important;
+                margin: 0 auto !important;
+            }
+        }
+
+        /* Prevent horizontal scroll everywhere */
+        html, body {
+            max-width: 100vw;
+            overflow-x: hidden;
+        }
+
+        /* ...existing code... */
     </style>
+    <link rel="stylesheet" href="src/index.css">
+    <link rel="stylesheet" href="mobile.css">
 </head>
 <body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors duration-300">
     
@@ -361,7 +516,7 @@
                         
                         <div class="flex">
                             <div class="flex-shrink-0 w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center mr-4">
-                                <i class="fas fa-target text-purple-600"></i>
+                                <i class="fas fa-bullseye text-purple-600"></i>
                             </div>
                             <div>
                                 <h4 class="font-semibold mb-2">Goals</h4>

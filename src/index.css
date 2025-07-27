@@ -20,7 +20,8 @@ html {
 body {
   font-family: 'Inter', sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-primary);
+  background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -132,9 +133,106 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* Extra Responsive Tweaks for Mobile */
+@media (max-width: 768px) {
+  /* Prevent horizontal scroll everywhere */
+  html, body {
+    width: 100vw !important;
+    max-width: 100vw !important;
+    overflow-x: hidden !important;
+  }
+
+  /* Headings and text scaling */
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1.5rem !important;
+    text-align: center !important;
+  }
+
+  /* Cards, sections, and containers */
+  .card, .max-w-6xl, .max-w-7xl {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
+  /* Stack grids and flex layouts vertically */
+  .grid, .md\:grid-cols-2, .md\:grid-cols-3, .lg\:grid-cols-3 {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.5rem !important;
+  }
+  .flex, .items-center {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 1rem !important;
+  }
+
+  /* Social icons and links wrap/stack */
+  .space-x-6, .space-x-8, .space-x-4 {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+    gap: 1rem !important;
+  }
+
+  /* Buttons and links */
+  .btn, button, a {
+    min-height: 44px !important;
+    font-size: 1rem !important;
+    padding: 0.75rem 1rem !important;
+    width: 100% !important;
+    text-align: center !important;
+  }
+
+  /* Images and icons scale down */
+  img, .w-32, .h-32, .w-16, .h-16, .w-12, .h-12 {
+    max-width: 100% !important;
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important;
+  }
+
+  /* Form fields */
+  input, textarea {
+    font-size: 1rem !important;
+    min-height: 44px !important;
+    width: 100% !important;
+  }
+
+  /* Timeline and experience section */
+  .relative {
+    position: static !important;
+  }
+  .w-1\/2, .pr-8, .pl-8 {
+    width: 100% !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    text-align: center !important;
+  }
+
+  .flex-row, .sm\:flex-row {
+    flex-direction: column !important;
+    gap: 1rem !important;
+    width: 100% !important;
+  }
+  .grid {
+    width: 100% !important;
+  }
+}
+
 /* Print Styles */
 @media print {
   .no-print {
     display: none;
   }
+}
+
+:root {
+  --primary-color: #2563eb;
+  --secondary-color: #6b7280;
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+  --background: #ffffff;
+  --border: #e5e7eb;
 }
