@@ -257,9 +257,17 @@
                 min-height: 44px !important;
                 font-size: 1rem !important;
                 padding: 0.75rem 1rem !important;
-                width: 100% !important;
+                width: auto !important;
                 text-align: center !important;
             }
+            /* Only stack mobile menu links */
+    #mobile-menu a {
+        width: 100% !important;
+        min-height: 44px !important;
+        font-size: 1rem !important;
+        text-align: center !important;
+        display: block !important;
+    }
             .text-center {
                 text-align: center !important;
             }
@@ -1330,6 +1338,9 @@
                 }
             });
         });
+
+        // Add smooth scrolling and touch feedback
+        document.addEventListener('touchstart', function() {}, {passive: true});
 
         window.addEventListener('load', () => {
     const loadingScreen = document.getElementById('loading-screen');
